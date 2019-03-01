@@ -1,0 +1,15 @@
+<h1><%= "Edit #{@student.name}" %></h1>
+
+<% @student.errors.full_messages.each do |error| %>
+  <%= error %> <br>
+<% end %>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br>
+
+  <%= f.label :mod %>
+  <%= f.text_field :mod %> <br>
+
+  <%= f.submit %>
+<% end %>

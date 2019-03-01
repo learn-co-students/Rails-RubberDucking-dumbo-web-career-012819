@@ -1,0 +1,8 @@
+<h1><%= @duck.name %></h1>
+
+<h3>Description:</h3>
+<p><%= @duck.description %></p>
+
+<%= form_tag edit_duck_path, method: "get" do %>
+  <%= submit_tag "Edit Duck" %>
+<% end %>

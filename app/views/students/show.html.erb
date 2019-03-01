@@ -1,0 +1,25 @@
+<h1><%= "#{@student.name} - (Mod #{@student.mod})"%></h1>
+
+<!-- Displaying Ducks for Student -->
+<div id="ducks">
+  <h2>Ducks:</h2>
+
+  <% if @student.ducks.any? %>
+    <ul>
+      <% @student.ducks.each do |duck| %>
+        <li>
+          <%= duck.name %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    (<em>none</em>)
+  <% end %>
+</div>
+
+<br>
+
+<%= form_tag edit_student_path(@student), method: "get" do %>
+  <%= submit_tag "Edit Student"%>
+
+<% end %>
