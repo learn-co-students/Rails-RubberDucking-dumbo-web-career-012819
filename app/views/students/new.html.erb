@@ -1,0 +1,15 @@
+<h2>New Student Form</h2>
+
+<% @student.errors.messages.each do |message| %>
+    <li><%= message %></li>
+<% end %>
+
+<%= form_for(@student) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :mod %>
+    <%= f.number_field :mod %>
+
+    <%= f.submit %>
+<% end %>
